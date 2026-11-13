@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
-import { useSettingsStore, type ThemeType, type UnitType, type LanguageType } from '@/store/settings';
+import { CURRENCIES, currencyLabel } from '@/utils/currency';
+import { useSettingsStore, type ThemeType, type DistanceUnit, type TemperatureUnit, type LanguageType } from '@/store/settings';
 import { Card } from '@/components/Card';
 import { ImageCropper } from '@/components/ImageCropper';
 import { useTranslation } from '@/utils/i18n';
@@ -184,7 +185,7 @@ function AutoThemeColorPreview({
 
 export default function SettingsPage() {
   const {
-    theme, setTheme, unit, setUnit, language, setLanguage,
+    theme, setTheme, distanceUnit, setDistanceUnit, temperatureUnit, setTemperatureUnit, currency, setCurrency, language, setLanguage,
     amapKey, setAmapKey, baseUrl, setBaseUrl, apiKey, setApiKey,
     mapType, setMapType,
     backgroundImage, backgroundOriginalImage, uploadBackgroundImage, deleteBackgroundImage,
@@ -300,9 +301,19 @@ export default function SettingsPage() {
     { id: 'aurora', name: { zh: '极光', en: 'Aurora' }, colors: { bg: themeConfigs.aurora.bg, primary: themeConfigs.aurora.primary } },
   ];
 
-  const units: { id: UnitType; name: string }[] = [
-    { id: 'metric', name: t('metric') },
-    { id: 'imperial', name: t('imperial') },
+  const distanceUnits: { id: DistanceUnit; name: string }[] = [
+    { id: 'km', name: t('metric') },
+    { id: 'mi', name: t('imperial') },
+  ];
+
+  // Keep a saved currency selectable even if it is not in the built-in list
+  const currencyOptions = CURRENCIES.includes(currency as typeof CURRENCIES[number])
+    ? CURRENCIES
+    : [currency, ...CURRENCIES];
+
+  const temperatureUnits: { id: TemperatureUnit; name: string }[] = [
+    { id: 'celsius', name: t('celsius') },
+    { id: 'fahrenheit', name: t('fahrenheit') },
   ];
 
   const languages: { id: LanguageType; name: string }[] = [
@@ -843,25 +854,67 @@ export default function SettingsPage() {
       {/* Unit Settings */}
       <Card>
         <h3 className="font-semibold mb-4" style={{ color: colors.primary }}>{t('unitSettings')}</h3>
-        <div className="flex gap-3">
-          {units.map((u) => (
+        <p className="text-sm mb-2" style={{ color: colors.muted }}>{t('distanceUnit')}</p>
+        <div className="flex gap-3 mb-4">
+          {distanceUnits.map((u) => (
             <button
               key={u.id}
-              onClick={() => setUnit(u.id)}
+              onClick={() => setDistanceUnit(u.id)}
+              aria-pressed={distanceUnit === u.id}
               className={clsx(
                 'flex-1 p-3 rounded-lg border transition-all',
-                unit === u.id ? '' : 'opacity-70 hover:opacity-100'
+                distanceUnit === u.id ? '' : 'opacity-70 hover:opacity-100'
               )}
               style={{
-                borderColor: unit === u.id ? colors.primary : colors.border,
-                background: unit === u.id ? `${colors.primary}10` : 'transparent',
-                color: unit === u.id ? colors.primary : colors.muted,
+                borderColor: distanceUnit === u.id ? colors.primary : colors.border,
+                background: distanceUnit === u.id ? `${colors.primary}10` : 'transparent',
+                color: distanceUnit === u.id ? colors.primary : colors.muted,
               }}
             >
               {u.name}
             </button>
           ))}
         </div>
+        <p className="text-sm mb-2" style={{ color: colors.muted }}>{t('temperatureUnit')}</p>
+        <div className="flex gap-3">
+          {temperatureUnits.map((u) => (
+            <button
+              key={u.id}
+              onClick={() => setTemperatureUnit(u.id)}
+              aria-pressed={temperatureUnit === u.id}
+              className={clsx(
+                'flex-1 p-3 rounded-lg border transition-all',
+                temperatureUnit === u.id ? '' : 'opacity-70 hover:opacity-100'
+              )}
+              style={{
+                borderColor: temperatureUnit === u.id ? colors.primary : colors.border,
+                background: temperatureUnit === u.id ? `${colors.primary}10` : 'transparent',
+                color: temperatureUnit === u.id ? colors.primary : colors.muted,
+              }}
+            >
+              {u.name}
+            </button>
+          ))}
+        </div>
+        <label htmlFor="currency-select" className="block text-sm mt-4 mb-2" style={{ color: colors.muted }}>
+          {t('currencyUnit')}
+        </label>
+        <select
+          id="currency-select"
+          value={currency}
+          onChange={(e) => setCurrency(e.target.value)}
+          className="w-full p-3 rounded-lg border outline-none transition-all focus:ring-2 cursor-pointer"
+          style={{
+            borderColor: colors.border,
+            color: colors.primary,
+            background: colors.bg,
+          }}
+        >
+          {currencyOptions.map((code) => (
+            <option key={code} value={code}>{currencyLabel(code)}</option>
+          ))}
+        </select>
+        <p className="text-xs mt-2" style={{ color: colors.muted }}>{t('currencyHint')}</p>
       </Card>
 
       {/* Map Settings */}
