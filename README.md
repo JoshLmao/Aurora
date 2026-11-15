@@ -3,7 +3,7 @@
 </p>
 <h1 align="center">TeslaMate CyberUI</h1>
 
-<p align="center"><a href="README_EN.md">English</a> | 简体中文</p>
+<p align="center">English | <a href="README_ZH.md">简体中文</a></p>
 
 <p align="center">
   <a href="https://github.com/DeaglePC/TeslamateCyberUI/stargazers">
@@ -20,20 +20,20 @@
   </a>
 </p>
 
-<p align="center">一个现代化的 Tesla 数据可视化面板，连接 TeslaMate 数据库，采用赛博朋克风格设计。</p>
+<p align="center">A modern Tesla data visualization dashboard that connects to TeslaMate database with cyberpunk-style design.</p>
 
-> **🌟 在线体验 (Demo)**
+> **🌟 Online Demo**
 >
-> - **前端访问**：[https://tsl.deaglepc.cn/](https://tsl.deaglepc.cn/)
-> - **后端 API**：[https://tsldemo.deaglepc.cn](https://tsldemo.deaglepc.cn) *(自动在前端填充。用于演示的假数据)*
+> - **Frontend Access**: [https://tsl.deaglepc.cn/](https://tsl.deaglepc.cn/)
+> - **Backend API**: [https://tsldemo.deaglepc.cn](https://tsldemo.deaglepc.cn) *(Auto-filled，backend with mock data for demonstration purposes)*
 
-<h3 align="center">🦞 接入 <a href="https://github.com/openclaw/openclaw">OpenClaw</a> 技能</h3>
+<h3 align="center">🦞 <a href="https://github.com/openclaw/openclaw">OpenClaw</a> Skill</h3>
 <p align="center">
 <table align="center">
   <tr>
-    <th align="center">🚗 通勤查询</th>
-    <th align="center">� 路况分析</th>
-    <th align="center">🗺️ 行程记录</th>
+    <th align="center">🚗 Commute Query</th>
+    <th align="center">📊 Traffic Analysis</th>
+    <th align="center">🗺️ Trip Record</th>
   </tr>
   <tr>
     <td valign="middle"><img src="./screenshots/openclaw-commute.webp" width="250" /></td>
@@ -43,13 +43,13 @@
 </table>
 </p>
 
-<h3 align="center">UI 展示</h3>
+<h3 align="center">UI</h3>
 <p align="center">
 <table align="center">
   <tr>
-    <th align="center">🏠 主页</th>
-    <th align="center">🛣️ 驾驶记录</th>
-    <th align="center">⚡ 充电记录</th>
+    <th align="center">🏠 Home</th>
+    <th align="center">🛣️ Drives</th>
+    <th align="center">⚡ Charges</th>
   </tr>
   <tr>
     <td valign="top"><img src="./screenshots/home.webp" width="250" /></td>
@@ -57,9 +57,9 @@
     <td valign="top"><img src="./screenshots/charge-list.webp" width="250" /></td>
   </tr>
   <tr>
-    <th align="center">�️ 驾驶详情</th>
-    <th align="center">⚡ 充电详情</th>
-    <th align="center">⚙️ 设置</th>
+    <th align="center">🛣️ Drive Detail</th>
+    <th align="center">⚡ Charge Detail</th>
+    <th align="center">⚙️ Settings</th>
   </tr>
   <tr>
     <td valign="top"><img src="./screenshots/drive-detail.webp" width="250" /></td>
@@ -70,165 +70,165 @@
 </p>
 
 
-## 目录
+## Table of Contents
 
-- [功能特性](#功能特性)
-- [技术栈](#技术栈)
-- [与 TeslaMate 的关系](#与-teslamate-的关系)
-- [快速开始](#快速开始)
-- [配置说明](#配置说明)
-- [开发指南](#开发指南)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Relationship with TeslaMate](#relationship-with-teslamate)
+- [Quick Start](#quick-start)
+- [Configuration](#configuration)
+- [Development Guide](#development-guide)
 - [AI IDE Skill](#ai-ide-skill)
-- [功能详解](#功能详解)
-- [常见问题](#常见问题)
+- [Feature Details](#feature-details)
+- [FAQ](#faq)
 
-## 功能特性
+## Features
 
-### 🚗 车辆状态监控
-- **实时状态** - 电池电量、续航里程、车辆位置、当前状态
-- **车型图片** - 自动根据车型和外观颜色显示 Tesla 官方配置器图片
-- **翻转卡片** - 点击查看详细信息（VIN、型号、颜色、软件版本）
-- **位置地图** - 显示车辆当前位置和地址
-- **充电状态** - 实时显示充电电压、功率
+### 🚗 Vehicle Status Monitoring
+- **Real-time Status** - Battery level, range, vehicle location, current state
+- **Vehicle Image** - Automatically displays Tesla official configurator images based on model and color
+- **Flip Card** - Click to view detailed info (VIN, model, color, software version)
+- **Location Map** - Display current vehicle location and address
+- **Charging Status** - Real-time charging voltage and power display
 
-### 📊 数据统计
-- **概览统计** - 总里程、能效统计、温度信息
-- **SOC 历史** - 电池电量变化曲线，支持自定义日期范围
-- **活动时间线** - 可视化显示行驶、充电、在线、离线状态时间线
+### 📊 Data Statistics
+- **Overview Stats** - Total mileage, efficiency statistics, temperature info
+- **SOC History** - Battery level change curve with custom date range support
+- **Activity Timeline** - Visualized driving, charging, online, offline status timeline
 
-### ⚡ 充电管理
-- **充电记录列表** - 所有充电历史，支持筛选和排序
-- **充电详情** - 充电曲线图表（电量、功率）、充电时长、能量统计
-- **费用计算** - 显示充电费用（如 TeslaMate 已配置）
-- **位置信息** - 充电位置地图
+### ⚡ Charging Management
+- **Charging Records List** - All charging history with filtering and sorting
+- **Charging Details** - Charging curve charts (level, power), duration, energy stats
+- **Cost Calculation** - Display charging costs (if configured in TeslaMate)
+- **Location Info** - Charging location map
 
-### 🛣️ 驾驶记录
-- **驾驶记录列表** - 所有驾驶历史，支持筛选和排序
-- **驾驶详情** - 速度/功率曲线、海拔变化、驾驶时长、能耗统计
-- **胎压监测** - 实时显示四轮胎压数据
-- **温度信息** - 车内外温度记录
-- **轨迹地图** - 支持高德地图和 OpenStreetMap 两种地图源
-- **中国坐标纠偏** - 高德地图自动处理 GCJ-02 坐标偏移
+### 🛣️ Driving Records
+- **Driving Records List** - All driving history with filtering and sorting
+- **Driving Details** - Speed/power curves, elevation profile, driving duration, energy consumption stats
+- **Tire Pressure Monitoring** - Real-time display of all four tire pressures
+- **Temperature Info** - Interior and exterior temperature records
+- **Route Map** - Support for both Amap and OpenStreetMap map sources
+- **China Coordinate Correction** - Amap automatically handles GCJ-02 coordinate offset
 
-### 🎨 个性化设置
-- **5套主题配色** - 赛博朋克、特斯拉、暗夜、科技蓝、极光
-- **自动主题色** - 从背景图片提取主色调自动生成主题
-- **自定义背景** - 上传、裁剪、更换背景图片
-- **卡片透明度** - 自由调整卡片透明度
-- **多语言** - 支持中文/英文切换
-- **单位切换** - 公制/英制单位切换
+### 🎨 Personalization
+- **5 Theme Colors** - Cyberpunk, Tesla, Dark Night, Tech Blue, Aurora
+- **Auto Theme Color** - Automatically generate theme from dominant color extracted from background image
+- **Custom Background** - Upload, crop, and change background image
+- **Card Opacity** - Freely adjust card transparency
+- **Multi-language** - Support Chinese/English switching
+- **Unit Switching** - Metric/Imperial unit switching
 
-### 🔧 系统设置
-- **地图源切换** - 高德地图（中国推荐）/ OpenStreetMap
-- **API 连接配置** - 配置后端地址和 API Key
-- **高德地图 Key** - 配置高德地图 API Key
-- **背景图片管理** - 上传、裁剪、删除背景图片
+### 🔧 System Settings
+- **Map Source Switching** - Amap (recommended for China) / OpenStreetMap
+- **API Connection Config** - Configure backend address and API Key
+- **Amap Key** - Configure Amap API Key
+- **Background Image Management** - Upload, crop, delete background images
 
-### 🐳 Docker 一键部署
-- **多阶段构建** - 前后端独立构建，优化镜像体积
-- **环境变量配置** - 所有配置通过环境变量注入，无需修改代码
-- **健康检查** - 内置容器健康检查，确保服务可用
+### 🐳 Docker One-Click Deployment
+- **Multi-stage Build** - Independent frontend/backend builds, optimized image size
+- **Environment Variable Config** - All settings injected via environment variables, no code changes needed
+- **Health Checks** - Built-in container health checks to ensure service availability
 
-### 🧪 Mock 数据模式
-- **无需数据库** - 无需连接 TeslaMate 即可运行完整 UI
-- **开发调试** - 内置模拟数据，支持前端开发和 UI 预览
-- **在线演示** - 用于 Demo 站点展示
+### 🧪 Mock Data Mode
+- **No Database Required** - Run the full UI without connecting to TeslaMate
+- **Development & Debugging** - Built-in mock data for frontend development and UI preview
+- **Online Demo** - Used for demo site showcase
 
-### 📱 PWA（渐进式 Web 应用）支持
-本面板已完整支持 PWA，提供媲美原生 App 的沉浸式体验：
-- **秒开体验** - 支持核心资源的本地离线缓存
-- **桌面/主屏幕安装** - 在桌面系统（Chrome/Edge）或移动端（iOS/Android 主屏幕）可一键“安装到设备”
-- **原生沉浸感** - 隐藏浏览器状态栏与导航条，在 iOS 下呈现全屏无边框的赛博朋克深邃体验
+### 📱 PWA (Progressive Web App) Support
+This dashboard fully supports PWA, providing an immersive experience comparable to native apps:
+- **Instant Loading** - Supports local offline caching of core resources
+- **Install to Desktop/Home Screen** - One-click "Install to device" on desktop (Chrome/Edge) or mobile (iOS/Android)
+- **Native Immersion** - Hides browser status bar and navigation bar, presenting a full-screen borderless cyberpunk experience on iOS
 
-> **💡 最佳实践**：建议不要在浏览器内直接高频使用。请在你的手机浏览器（如 Safari）底部点击“分享” -> “添加到主屏幕”，或在电脑端浏览器的地址栏右侧点击“安装应用”图标，将其以独立 App 的形式运行以获得完美体验。
+> **💡 Best Practices**: We recommend not using it directly within a browser frequently. Please click "Share" -> "Add to Home Screen" at the bottom of your mobile browser (like Safari), or click the "Install App" icon on the right side of the address bar in your desktop browser. Run it as a standalone App for the perfect experience.
 
-## 技术栈
+## Tech Stack
 
-### 后端
-- **Go 1.21+** - 后端语言
-- **Gin** - Web 框架
-- **sqlx** - 数据库操作
-- **PostgreSQL** - TeslaMate 数据库（只读）
+### Backend
+- **Go 1.21+** - Backend language
+- **Gin** - Web framework
+- **sqlx** - Database operations
+- **PostgreSQL** - TeslaMate database (read-only)
 
-### 前端
-- **React 18** - UI 框架
-- **TypeScript** - 类型安全
-- **Vite** - 构建工具
-- **Tailwind CSS** - 样式框架
-- **ECharts** - 数据可视化
-- **Zustand** - 状态管理
+### Frontend
+- **React 18** - UI framework
+- **TypeScript** - Type safety
+- **Vite** - Build tool
+- **Tailwind CSS** - Style framework
+- **ECharts** - Data visualization
+- **Zustand** - State management
 
-## 与 TeslaMate 的关系
+## Relationship with TeslaMate
 
-### 架构说明
+### Architecture
 
 ```mermaid
 graph TD
     A[Tesla API] --> B[TeslaMate] --> C[PostgreSQL]
-    C -- 只读访问 --> D[CyberUI 后端]
-    D -- API --> E[CyberUI 前端]
+    C -- Read-only --> D[CyberUI Backend]
+    D -- API --> E[CyberUI Frontend]
 ```
 
-**TeslaMate CyberUI 是一个独立的可视化面板，它：**
-- 🔗 **只读访问** TeslaMate 的 PostgreSQL 数据库
-- 📊 **不修改**任何 TeslaMate 数据
-- 🚀 **独立部署**，不影响 TeslaMate 运行
-- 🔄 **实时读取** TeslaMate 记录的数据
+**TeslaMate CyberUI is an independent visualization dashboard that:**
+- 🔗 **Read-only access** to TeslaMate's PostgreSQL database
+- 📊 **Does not modify** any TeslaMate data
+- 🚀 **Independent deployment**, does not affect TeslaMate operation
+- 🔄 **Real-time reading** of data recorded by TeslaMate
 
-### 为什么需要 CyberUI？
+### Why CyberUI?
 
-TeslaMate 自带 Grafana 仪表盘，但：
-- Grafana 更偏向数据分析，不够直观
-- CyberUI 提供更现代化的移动端友好界面
-- 独立部署，可作为 TeslaMate 的补充视图
+TeslaMate comes with Grafana dashboards, but:
+- Grafana is more focused on data analysis, less intuitive
+- CyberUI provides a more modern mobile-friendly interface
+- Independent deployment, can serve as a supplementary view for TeslaMate
 
-## 快速开始
+## Quick Start
 
-### 前置要求
+### Prerequisites
 
-1. **已运行 TeslaMate** - 确保 TeslaMate 正常运行并记录数据
-2. **Docker & Docker Compose** - 推荐使用 Docker 部署
-3. **高德地图 API Key** (可选) - 用于驾驶轨迹地图
+1. **TeslaMate running** - Ensure TeslaMate is running normally and recording data
+2. **Docker & Docker Compose** - Docker deployment recommended
+3. **Amap API Key** (optional) - For driving route map
 
-### 配置 TeslaMate 数据库访问
+### Configure TeslaMate Database Access
 
-CyberUI 需要访问 TeslaMate 的 PostgreSQL 数据库。你需要确保：
+CyberUI needs to access TeslaMate's PostgreSQL database. You need to ensure:
 
-#### 方法一：TeslaMate 使用默认 Docker 网络
+#### Method 1: TeslaMate using default Docker network
 
-如果你的 TeslaMate 使用 Docker 部署，确保数据库端口可访问：
+If your TeslaMate is deployed with Docker, ensure database port is accessible:
 
 ```yaml
-# TeslaMate 的 docker-compose.yml 示例
+# TeslaMate's docker-compose.yml example
 services:
   database:
     image: postgres:15
-    # 暴露端口或使用外部网络
+    # Expose port or use external network
     ports:
-      - "5432:5432"  # 可选：暴露给主机访问
+      - "5432:5432"  # Optional: expose for host access
 ```
 
-#### 方法二：使用同一 Docker 网络
+#### Method 2: Use the same Docker network
 
-将 CyberUI 加入 TeslaMate 的网络：
+Add CyberUI to TeslaMate's network:
 
 ```yaml
-# CyberUI 的 docker-compose.yml
+# CyberUI's docker-compose.yml
 services:
   backend:
     networks:
-      - teslamate_default  # TeslaMate 的网络
+      - teslamate_default  # TeslaMate's network
 networks:
   teslamate_default:
     external: true
 ```
 
-#### 方法三：环境变量配置
+#### Method 3: Environment variable configuration
 
-最简单的方式是通过环境变量连接：
+The simplest way is to connect via environment variables:
 
 ```bash
-# 创建 .env 文件
+# Create .env file
 TESLAMATE_DB_HOST=your-teslamate-db-host
 TESLAMATE_DB_PORT=5432
 TESLAMATE_DB_USER=teslamate
@@ -236,126 +236,125 @@ TESLAMATE_DB_PASSWORD=your-password
 TESLAMATE_DB_NAME=teslamate
 ```
 
-### Docker 部署
+### Docker Deployment
 
 ```bash
-# 1. 克隆项目
+# 1. Clone the project
 git clone https://github.com/DeaglePC/TeslamateCyberUI.git
 cd TeslamateCyberUI
 
-# 2. 创建配置文件（根据实际情况修改）
+# 2. Create configuration file (edit as needed)
 cp .env.example .env
-# 编辑 .env，填入 TeslaMate 数据库连接信息等配置
+# Edit .env with your TeslaMate database connection info
 # vi .env
 
-# 3. 启动服务
+# 3. Start services
 docker compose up -d
 
-# 4. 查看日志
+# 4. View logs
 docker compose logs -f
 
-# 5. 访问应用
+# 5. Access the application
 # http://localhost:8080
 ```
 
-### 本地开发 (Mock 数据模式)
+### Local Development (Mock Data Mode)
 
-如果本地没有 TeslaMate 数据库，可以开启 Mock 数据模式进行前端开发和 UI 预览：
+If you don't have a TeslaMate database locally, you can enable Mock data mode for frontend development and UI preview:
 
 ```bash
-# 后端
+# Backend
 cd backend
 go mod download
-# 临时启用 Mock 数据环境变量
+# Temporarily enable the mock data environment variable
 export CYBERUI_MOCK_DATA=true
 go run cmd/server/main.go
 
-# 前端 (新终端窗口)
+# Frontend (in a new terminal window)
 cd frontend
 npm install
 npm run dev
 ```
 
-### 本地开发 (真实数据库模式)
+### Local Development (Real Database Mode)
 
 ```bash
-# 后端
+# Backend
 cd backend
 go mod download
-# 通过 .env / 环境变量 / configs/config.yaml 配置好真实数据库连接
+# Configure real database connection via .env / environment variables / configs/config.yaml
 go run cmd/server/main.go
 
-# 前端 (新终端窗口)
+# Frontend (in a new terminal window)
 cd frontend
 npm install
 npm run dev
 ```
 
-## 配置说明
+## Configuration
 
-### 环境变量
+### Environment Variables
 
-#### 数据库连接（必填）
+#### Database Connection (Required)
 
-| 变量名                  | 说明                 | 默认值      | 必填 |
-| ----------------------- | -------------------- | ----------- | ---- |
-| `TESLAMATE_DB_HOST`     | TeslaMate 数据库地址 | -           | ✅    |
-| `TESLAMATE_DB_PORT`     | 数据库端口           | `5432`      |      |
-| `TESLAMATE_DB_USER`     | 数据库用户名         | -           | ✅    |
-| `TESLAMATE_DB_PASSWORD` | 数据库密码           | -           | ✅    |
-| `TESLAMATE_DB_NAME`     | 数据库名称           | `teslamate` |      |
-| `TESLAMATE_DB_SSLMODE`  | SSL 模式             | `disable`   |      |
+| Variable                | Description             | Default     | Required |
+| ----------------------- | ----------------------- | ----------- | -------- |
+| `TESLAMATE_DB_HOST`     | TeslaMate database host | -           | ✅        |
+| `TESLAMATE_DB_PORT`     | Database port           | `5432`      |          |
+| `TESLAMATE_DB_USER`     | Database username       | -           | ✅        |
+| `TESLAMATE_DB_PASSWORD` | Database password       | -           | ✅        |
+| `TESLAMATE_DB_NAME`     | Database name           | `teslamate` |          |
+| `TESLAMATE_DB_SSLMODE`  | SSL mode                | `disable`   |          |
 
-#### 服务配置
+#### Service Configuration
 
-| 变量名                | 说明                                            | 默认值          |
+| Variable              | Description                                     | Default         |
 | --------------------- | ----------------------------------------------- | --------------- |
-| `CYBERUI_PORT`        | 前端网页访问端口                                | `8080`          |
-| `CYBERUI_API_PORT`    | 后端 API 暴露端口（用于调试）                   | `8899`          |
-| `CYBERUI_SERVER_MODE` | 运行模式（`debug` / `release`）                 | `release`       |
-| `LOG_LEVEL`           | 日志级别（`debug` / `info` / `warn` / `error`） | `info`          |
-| `TZ`                  | 时区                                            | `Asia/Shanghai` |
+| `CYBERUI_PORT`        | Frontend web access port                        | `8080`          |
+| `CYBERUI_API_PORT`    | Backend API port (for debugging)                | `8899`          |
+| `CYBERUI_SERVER_MODE` | Run mode (`debug` / `release`)                  | `release`       |
+| `LOG_LEVEL`           | Log level (`debug` / `info` / `warn` / `error`) | `info`          |
+| `TZ`                  | Timezone                                        | `Asia/Shanghai` |
 
-#### API 设置
+#### API Settings
 
-| 变量名              | 说明                             | 默认值 |
-| ------------------- | -------------------------------- | ------ |
-| `VITE_API_BASE_URL` | 前端默认 API 地址（构建时生效）  | 空     |
-| `CYBERUI_API_KEY`   | API 认证密钥（留空则不启用认证） | 空     |
+| Variable            | Description                                    | Default |
+| ------------------- | ---------------------------------------------- | ------- |
+| `VITE_API_BASE_URL` | Frontend default API address (build-time only) | empty   |
+| `CYBERUI_API_KEY`   | API authentication key (empty to disable auth) | empty   |
 
-> 💡 支持通过 URL 参数传递后端地址和 API Key，例如：
+> 💡 You can pass the backend address and API Key via URL parameters, e.g.:
 > `https://tsl.deaglepc.cn/?backend=https://tsldemo.deaglepc.cn/&apikey=xxx`
 
+#### Mock Data
 
-#### Mock 数据
+| Variable            | Description                              | Default |
+| ------------------- | ---------------------------------------- | ------- |
+| `CYBERUI_MOCK_DATA` | Enable mock data mode (`true` / `false`) | `false` |
 
-| 变量名              | 说明                                   | 默认值  |
-| ------------------- | -------------------------------------- | ------- |
-| `CYBERUI_MOCK_DATA` | 启用 Mock 数据模式（`true` / `false`） | `false` |
+### Amap Configuration
 
-### 高德地图配置
+1. Visit [Amap Open Platform](https://console.amap.com/dev/key/app)
+2. Create an application, select "Web端 (JS API)" type
+3. Enter the Key in settings page
 
-1. 访问 [高德开放平台](https://console.amap.com/dev/key/app)
-2. 创建应用，选择「Web端 (JS API)」类型
-3. 获取 Key 后在设置页面填入
-
-> ⚠️ **重要**：必须选择「Web端 (JS API)」类型，不能使用「Web服务」类型。
+> ⚠️ **Important**: Must select "Web端 (JS API)" type, cannot use "Web服务" type.
 
 ## AI IDE Skill
 
-本项目内置了 `tesla-stats` 技能包，可安装到主流 AI IDE 中，让 AI 助手直接查询你的 Tesla 数据。
+This project includes a built-in `tesla-stats` skill that can be installed into popular AI IDEs, allowing AI assistants to query your Tesla data directly.
 
-### 支持功能
+### Capabilities
 
-- 🚗 查询车辆实时状态（电量、续航、位置）
-- 📊 获取 SoC 历史、活动时间线
-- ⚡ 查看充电/驾驶记录及详情
-- 🔋 电池健康与效率统计
-- ⚙️ 读写 UI 设置
+- 🚗 Query real-time vehicle status (battery, range, location)
+- 📊 Retrieve SoC history and activity timeline
+- ⚡ View charge/drive records and details
+- 🔋 Battery health and efficiency statistics
+- ⚙️ Read/write UI settings
 
-### 支持平台
+### Supported Platforms
 
-| 平台 | 项目级目录 | 全局目录 |
+| Platform | Project-level | Global |
 | --- | --- | --- |
 | Claude Code | `.claude/skills/` | `~/.claude/skills/` |
 | Codex (OpenAI) | `.codex/skills/` | `~/.codex/skills/` |
@@ -363,150 +362,150 @@ npm run dev
 | Antigravity | `.agent/skills/` | `~/.gemini/antigravity/skills/` |
 | Cursor | `.cursor/skills/` | `~/.cursor/skills/` |
 
-### 安装方式
+### Installation
 
 ```bash
 cd skill
 
 # Windows PowerShell
-.\install.ps1                          # 交互模式
-.\install.ps1 -Platforms all           # 安装到所有平台（项目级）
-.\install.ps1 -Global -Platforms all   # 安装到所有平台（全局）
+.\install.ps1                          # Interactive mode
+.\install.ps1 -Platforms all           # Install for all platforms (project)
+.\install.ps1 -Global -Platforms all   # Install for all platforms (global)
 
 # Linux / macOS
-bash install.sh                         # 交互模式
-bash install.sh all                     # 安装到所有平台（项目级）
-bash install.sh --global all            # 安装到所有平台（全局）
+bash install.sh                         # Interactive mode
+bash install.sh all                     # Install for all platforms (project)
+bash install.sh --global all            # Install for all platforms (global)
 ```
 
-### 安装后配置
+### Post-Install Configuration
 
-设置环境变量后，即可在 AI IDE 中直接对话查询 Tesla 数据：
+Set environment variables, then you can chat with your AI IDE to query Tesla data:
 
 ```bash
 export TESLA_STATS_BASE_URL=http://your-server:8080/api/v1
 export TESLA_STATS_API_KEY=your-api-key
 ```
 
-> 💡 **使用示例**：在 AI IDE 中输入 「查看我的 Tesla 当前状态」或 「Show my Tesla's SoC history for last 24 hours」。
+> 💡 **Usage Example**: Type "Show my Tesla's current status" or "Show my Tesla's SoC history for last 24 hours" in your AI IDE.
 
-## 功能详解
+## Feature Details
 
-### 首页仪表盘
+### Home Dashboard
 
-| 功能     | 说明                                  |
-| -------- | ------------------------------------- |
-| 车辆图片 | 根据车型和颜色自动匹配 Tesla 官方图片 |
-| 电量显示 | 电池图标 + 百分比，低于 20% 变红      |
-| 状态信息 | 当前状态（行驶/充电/在线/离线/休眠）  |
-| 位置地图 | 当前车辆位置，显示地址                |
-| 统计卡片 | 续航、里程、软件版本、温度            |
-| SOC 图表 | 电池电量变化曲线                      |
-| 时间线   | 状态变化时间线可视化                  |
+| Feature         | Description                                              |
+| --------------- | -------------------------------------------------------- |
+| Vehicle Image   | Auto-match Tesla official image based on model and color |
+| Battery Display | Battery icon + percentage, turns red below 20%           |
+| Status Info     | Current state (driving/charging/online/offline/asleep)   |
+| Location Map    | Current vehicle location with address                    |
+| Stats Cards     | Range, mileage, software version, temperature            |
+| SOC Chart       | Battery level change curve                               |
+| Timeline        | State change timeline visualization                      |
 
-### 充电记录
+### Charging Records
 
-| 功能     | 说明                   |
-| -------- | ---------------------- |
-| 列表筛选 | 按时间范围筛选充电记录 |
-| 充电详情 | 电量曲线、功率曲线     |
-| 充电统计 | 充电时长、能量、费用   |
-| 位置地图 | 充电位置显示           |
+| Feature          | Description                           |
+| ---------------- | ------------------------------------- |
+| List Filter      | Filter charging records by time range |
+| Charging Details | Level curve, power curve              |
+| Charging Stats   | Duration, energy, cost                |
+| Location Map     | Charging location display             |
 
-### 驾驶记录
+### Driving Records
 
-| 功能     | 说明                         |
-| -------- | ---------------------------- |
-| 列表筛选 | 按时间范围筛选驾驶记录       |
-| 驾驶详情 | 速度曲线、功率曲线、海拔变化 |
-| 轨迹地图 | 高德/OpenStreetMap 双地图源  |
-| 驾驶统计 | 距离、时长、平均能耗         |
+| Feature         | Description                                    |
+| --------------- | ---------------------------------------------- |
+| List Filter     | Filter driving records by time range           |
+| Driving Details | Speed curve, power curve, elevation changes    |
+| Route Map       | Amap/OpenStreetMap dual map sources            |
+| Driving Stats   | Distance, duration, average energy consumption |
 
-### 主题系统
+### Theme System
 
-| 主题     | 配色风格                 |
-| -------- | ------------------------ |
-| 赛博朋克 | 蓝紫霓虹，默认主题       |
-| 特斯拉   | 红黑配色，致敬官方       |
-| 暗夜     | 深蓝紫色，低调优雅       |
-| 科技蓝   | 清新蓝色科技感           |
-| 极光     | 绿紫渐变，梦幻唯美       |
-| 自动主题 | 从背景图提取颜色自动生成 |
+| Theme      | Color Style                                |
+| ---------- | ------------------------------------------ |
+| Cyberpunk  | Blue-purple neon, default theme            |
+| Tesla      | Red-black, tribute to official             |
+| Dark Night | Deep blue-purple, low-key elegant          |
+| Tech Blue  | Fresh blue tech feel                       |
+| Aurora     | Green-purple gradient, dreamy              |
+| Auto Theme | Auto-generated from background image color |
 
-## 开发指南
+## Development Guide
 
-### 项目结构
+### Project Structure
 
 ```
 TeslamateCyberUI/
-├── backend/                 # Go 后端
-│   ├── cmd/server/         # 应用入口
+├── backend/                 # Go backend
+│   ├── cmd/server/         # Application entry
 │   ├── internal/
-│   │   ├── config/         # 配置管理
-│   │   ├── handler/        # HTTP 处理器
-│   │   ├── model/          # 数据模型
-│   │   └── repository/     # 数据仓储
-│   └── configs/            # 配置文件
-├── frontend/               # React 前端
+│   │   ├── config/         # Configuration management
+│   │   ├── handler/        # HTTP handlers
+│   │   ├── model/          # Data models
+│   │   └── repository/     # Data repositories
+│   └── configs/            # Config files
+├── frontend/               # React frontend
 │   ├── src/
-│   │   ├── components/     # 组件
-│   │   ├── pages/          # 页面
-│   │   ├── services/       # API 服务
-│   │   ├── store/          # 状态管理
-│   │   └── utils/          # 工具函数
+│   │   ├── components/     # Components
+│   │   ├── pages/          # Pages
+│   │   ├── services/       # API services
+│   │   ├── store/          # State management
+│   │   └── utils/          # Utility functions
 │   └── public/
 ├── docker-compose.yml
 └── README.md
 ```
 
-### API 接口
+### API Endpoints
 
 ```
-GET /api/v1/cars                    # 车辆列表
-GET /api/v1/cars/:id/status         # 车辆状态
-GET /api/v1/cars/:id/charges        # 充电记录
-GET /api/v1/cars/:id/drives         # 驾驶记录
-GET /api/v1/charges/:id             # 充电详情
-GET /api/v1/charges/:id/stats       # 充电统计
-GET /api/v1/drives/:id              # 驾驶详情
-GET /api/v1/drives/:id/positions    # 驾驶轨迹
-GET /api/v1/cars/:id/stats/overview # 概览统计
-GET /api/v1/cars/:id/stats/soc      # SOC 历史
-GET /api/v1/cars/:id/stats/timeline # 状态时间线
-GET /health                         # 健康检查
+GET /api/v1/cars                    # Vehicle list
+GET /api/v1/cars/:id/status         # Vehicle status
+GET /api/v1/cars/:id/charges        # Charging records
+GET /api/v1/cars/:id/drives         # Driving records
+GET /api/v1/charges/:id             # Charging details
+GET /api/v1/charges/:id/stats       # Charging stats
+GET /api/v1/drives/:id              # Driving details
+GET /api/v1/drives/:id/positions    # Driving positions
+GET /api/v1/cars/:id/stats/overview # Overview stats
+GET /api/v1/cars/:id/stats/soc      # SOC history
+GET /api/v1/cars/:id/stats/timeline # Status timeline
+GET /health                         # Health check
 ```
 
 
-## 常见问题
+## FAQ
 
-### Q: 无法连接数据库？
+### Q: Cannot connect to database?
 
-1. 检查数据库地址和端口是否正确
-2. 确认数据库用户有访问权限
-3. 如果使用 Docker，检查网络配置
+1. Check if database address and port are correct
+2. Confirm database user has access permissions
+3. If using Docker, check network configuration
 
-### Q: 高德地图显示错误？
+### Q: Amap display error?
 
-1. 确认使用的是「Web端 (JS API)」类型的 Key
-2. 检查 Key 是否正确配置
-3. 如果出现 `USERKEY_PLAT_NOMATCH` 错误，说明 Key 类型不对
+1. Confirm using "Web端 (JS API)" type Key
+2. Check if Key is configured correctly
+3. If `USERKEY_PLAT_NOMATCH` error appears, Key type is wrong
 
-### Q: 数据不刷新？
+### Q: Data not refreshing?
 
-数据来自 TeslaMate，刷新频率取决于 TeslaMate 的设置。CyberUI 每 30 秒自动刷新一次。
+Data comes from TeslaMate, refresh frequency depends on TeslaMate settings. CyberUI auto-refreshes every 30 seconds.
 
-### Q: 可以修改 TeslaMate 数据吗？
+### Q: Can I modify TeslaMate data?
 
-不可以。CyberUI 只读取数据，不会修改任何 TeslaMate 数据。
+No. CyberUI only reads data, it does not modify any TeslaMate data.
 
-## 许可证
+## License
 
 MIT License
 
-## 致谢
+## Acknowledgments
 
-- [TeslaMate](https://github.com/adriankumpf/teslamate) - 优秀的 Tesla 数据记录工具
-- [Gin](https://github.com/gin-gonic/gin) - Go Web 框架
-- [React](https://react.dev/) - UI 框架
-- [Tailwind CSS](https://tailwindcss.com/) - CSS 框架
-- [ECharts](https://echarts.apache.org/) - 数据可视化库
+- [TeslaMate](https://github.com/adriankumpf/teslamate) - Excellent Tesla data logging tool
+- [Gin](https://github.com/gin-gonic/gin) - Go Web framework
+- [React](https://react.dev/) - UI framework
+- [Tailwind CSS](https://tailwindcss.com/) - CSS framework
+- [ECharts](https://echarts.apache.org/) - Data visualization library
