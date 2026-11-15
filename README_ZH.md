@@ -22,11 +22,6 @@
 
 <p align="center">一个现代化的 Tesla 数据可视化面板，连接 TeslaMate 数据库，采用赛博朋克风格设计。</p>
 
-> **🌟 在线体验 (Demo)**
->
-> - **前端访问**：[https://tsl.deaglepc.cn/](https://tsl.deaglepc.cn/)
-> - **后端 API**：[https://tsldemo.deaglepc.cn](https://tsldemo.deaglepc.cn) *(自动在前端填充。用于演示的假数据)*
-
 <h3 align="center">🦞 接入 <a href="https://github.com/openclaw/openclaw">OpenClaw</a> 技能</h3>
 <p align="center">
 <table align="center">
@@ -240,8 +235,8 @@ TESLAMATE_DB_NAME=teslamate
 
 ```bash
 # 1. 克隆项目
-git clone https://github.com/DeaglePC/TeslamateCyberUI.git
-cd TeslamateCyberUI
+git clone https://github.com/JoshLmao/Aurora.git
+cd Aurora
 
 # 2. 创建配置文件（根据实际情况修改）
 cp .env.example .env

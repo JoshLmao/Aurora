@@ -22,11 +22,6 @@
 
 <p align="center">A modern Tesla data visualization dashboard that connects to TeslaMate database with cyberpunk-style design.</p>
 
-> **🌟 Online Demo**
->
-> - **Frontend Access**: [https://tsl.deaglepc.cn/](https://tsl.deaglepc.cn/)
-> - **Backend API**: [https://tsldemo.deaglepc.cn](https://tsldemo.deaglepc.cn) *(Auto-filled，backend with mock data for demonstration purposes)*
-
 <h3 align="center">🦞 <a href="https://github.com/openclaw/openclaw">OpenClaw</a> Skill</h3>
 <p align="center">
 <table align="center">
@@ -240,8 +235,8 @@ TESLAMATE_DB_NAME=teslamate
 
 ```bash
 # 1. Clone the project
-git clone https://github.com/DeaglePC/TeslamateCyberUI.git
-cd TeslamateCyberUI
+git clone https://github.com/JoshLmao/Aurora.git
+cd Aurora
 
 # 2. Create configuration file (edit as needed)
 cp .env.example .env
