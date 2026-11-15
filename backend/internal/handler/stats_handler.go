@@ -170,18 +170,18 @@ func (h *Handler) GetStatesTimeline(c *gin.Context) {
 }
 
 // parseTimeRange parses time range from query parameters
-// Supports formats: YYYY-MM-DD, YYYY-MM-DDTHH:mm:ss (local Beijing time), RFC3339
+// Supports formats: YYYY-MM-DD, YYYY-MM-DDTHH:mm:ss (server local time, from TZ), RFC3339
 // Returns UTC time for database queries
 func parseTimeRange(fromStr, toStr string, defaultHours int) (start, end time.Time) {
 	if fromStr != "" && toStr != "" {
-		location := beijingLocation()
+		location := localLocation()
 
 		// Try parsing as simple date first (YYYY-MM-DD)
 		s, err1 := time.ParseInLocation("2006-01-02", fromStr, location)
 		e, err2 := time.ParseInLocation("2006-01-02", toStr, location)
 		if err1 == nil && err2 == nil {
 			start = s.UTC()
-			end = e.Add(24*time.Hour - time.Second).UTC() // End of the day
+			end = e.AddDate(0, 0, 1).Add(-time.Second).UTC() // End of the local day (DST-safe)
 			return
 		}
 
@@ -195,7 +195,7 @@ func parseTimeRange(fromStr, toStr string, defaultHours int) (start, end time.Ti
 		}
 
 		// Try local datetime format (YYYY-MM-DDTHH:mm:ss) without timezone
-		// Assume Beijing time, convert to UTC
+		// Interpreted in the server timezone (TZ), then converted to UTC
 		const localLayout = "2006-01-02T15:04:05"
 		s, err1 = time.ParseInLocation(localLayout, fromStr, location)
 		e, err2 = time.ParseInLocation(localLayout, toStr, location)

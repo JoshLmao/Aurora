@@ -12,8 +12,8 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    image: teslamate-cyberui-backend:latest
-    container_name: teslamate-cyberui-backend
+    image: aurora-backend:latest
+    container_name: aurora-backend
     restart: unless-stopped
     environment:
       # Database configuration (TeslaMate PostgreSQL)
@@ -40,7 +40,7 @@ services:
       - TESLAMATE_MQTT_PASSWORD=${TESLAMATE_MQTT_PASSWORD:-}
       - TESLAMATE_MQTT_CLIENT_ID=${TESLAMATE_MQTT_CLIENT_ID:-teslamate-cyberui-backend}
       # Timezone
-      - TZ=${TZ:-Asia/Shanghai}
+      - TZ=${TZ:-Europe/London}
     networks:
       - cyberui-internal
     # 后端 API 端口（可选，用于直接访问后端 API 调试）
@@ -65,13 +65,13 @@ services:
       dockerfile: Dockerfile
       args:
         - VITE_API_BASE_URL=${VITE_API_BASE_URL:-}
-    image: teslamate-cyberui:latest
-    container_name: teslamate-cyberui
+    image: aurora:latest
+    container_name: aurora
     restart: unless-stopped
     ports:
       - "${CYBERUI_PORT:-8080}:80"
     environment:
-      - TZ=${TZ:-Asia/Shanghai}
+      - TZ=${TZ:-Europe/London}
       # Umami Analytics (optional)
       - UMAMI_WEBSITE_ID=${UMAMI_WEBSITE_ID:-}
       - UMAMI_SCRIPT_URL=${UMAMI_SCRIPT_URL:-}
