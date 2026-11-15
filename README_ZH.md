@@ -309,7 +309,7 @@ npm run dev
 | `CYBERUI_API_PORT`    | 后端 API 暴露端口（用于调试）                   | `8899`          |
 | `CYBERUI_SERVER_MODE` | 运行模式（`debug` / `release`）                 | `release`       |
 | `LOG_LEVEL`           | 日志级别（`debug` / `info` / `warn` / `error`） | `info`          |
-| `TZ`                  | 时区                                            | `Asia/Shanghai` |
+| `TZ`                  | 时区                                            | `Europe/London` |
 
 #### API 设置
 

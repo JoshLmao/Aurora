@@ -309,7 +309,7 @@ npm run dev
 | `CYBERUI_API_PORT`    | Backend API port (for debugging)                | `8899`          |
 | `CYBERUI_SERVER_MODE` | Run mode (`debug` / `release`)                  | `release`       |
 | `LOG_LEVEL`           | Log level (`debug` / `info` / `warn` / `error`) | `info`          |
-| `TZ`                  | Timezone                                        | `Asia/Shanghai` |
+| `TZ`                  | Timezone                                        | `Europe/London` |
 
 #### API Settings
 

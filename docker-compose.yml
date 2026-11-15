@@ -38,7 +38,7 @@ services:
       - TESLAMATE_MQTT_PASSWORD=${TESLAMATE_MQTT_PASSWORD:-}
       - TESLAMATE_MQTT_CLIENT_ID=${TESLAMATE_MQTT_CLIENT_ID:-teslamate-cyberui-backend}
       # Timezone
-      - TZ=${TZ:-Asia/Shanghai}
+      - TZ=${TZ:-Europe/London}
     networks:
       - cyberui-internal
     # 后端 API 端口（可选，用于直接访问后端 API 调试）
@@ -64,7 +64,7 @@ services:
     ports:
       - "${CYBERUI_PORT:-8080}:80"
     environment:
-      - TZ=${TZ:-Asia/Shanghai}
+      - TZ=${TZ:-Europe/London}
       # Umami Analytics (optional)
       - UMAMI_WEBSITE_ID=${UMAMI_WEBSITE_ID:-}
       - UMAMI_SCRIPT_URL=${UMAMI_SCRIPT_URL:-}

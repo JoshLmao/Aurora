@@ -47,21 +47,22 @@ func parseDateTime(dateStr string, isEndDate bool) *time.Time {
 		return nil
 	}
 
-	// 纯日期格式 YYYY-MM-DD（主要格式）
-	// 假设输入为本地时间（北京时间），转换为 UTC
-	location := beijingLocation()
+	// Plain date YYYY-MM-DD (the main format).
+	// Interpreted in the server's timezone (TZ), then converted to UTC.
+	location := localLocation()
 	if t, err := time.ParseInLocation("2006-01-02", dateStr, location); err == nil {
 		utcTime := t.UTC()
 		if isEndDate {
-			// 结束日期设置为当天结束时间 23:59:59 北京时间
-			endOfDay := t.Add(24*time.Hour - time.Second).UTC()
+			// End date means the last second of that local day. AddDate keeps
+			// this correct on days when DST makes the day 23 or 25 hours long.
+			endOfDay := t.AddDate(0, 0, 1).Add(-time.Second).UTC()
 			return &endOfDay
 		}
 		return &utcTime
 	}
 
-	// 本地时间格式（不带时区后缀）2006-01-02T15:04:05
-	// 假设输入为本地时间（北京时间），转换为 UTC
+	// Local time without an offset: 2006-01-02T15:04:05.
+	// Interpreted in the server's timezone (TZ), then converted to UTC.
 	if t, err := time.ParseInLocation("2006-01-02T15:04:05", dateStr, location); err == nil {
 		utcTime := t.UTC()
 		return &utcTime
@@ -82,11 +83,8 @@ func parseDateTime(dateStr string, isEndDate bool) *time.Time {
 	return nil
 }
 
-// beijingLocation 返回北京时间时区
-func beijingLocation() *time.Location {
-	location, err := time.LoadLocation("Asia/Shanghai")
-	if err != nil {
-		return time.FixedZone("CST", 8*3600)
-	}
-	return location
+// localLocation returns the server's configured timezone. Go derives
+// time.Local from the TZ environment variable (UTC when it is unset).
+func localLocation() *time.Location {
+	return time.Local
 }
